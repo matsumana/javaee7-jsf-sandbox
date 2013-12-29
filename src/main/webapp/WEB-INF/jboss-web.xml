@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<jboss-web>
+    <context-root>/javaee7-jsf-sandbox</context-root>
+</jboss-web>
