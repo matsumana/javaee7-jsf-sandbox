@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>info.matsumana</groupId>
-    <artifactId>javaee7-sandbox</artifactId>
+    <artifactId>javaee7-jsf-sandbox</artifactId>
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <name>javaee7-sandbox</name>
+    <name>javaee7-jsf-sandbox</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -84,6 +84,7 @@
                 <version>2.3</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <warName>${project.name}</warName>
                 </configuration>
             </plugin>
             <plugin>
