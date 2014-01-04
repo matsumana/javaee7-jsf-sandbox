@@ -11,10 +11,10 @@ import javax.sql.DataSource;
 @RequestScoped
 public class DataSourceProducer {
 
-    @Resource(lookup = "java:jboss/datasources/postgres-matsumana")
+    @Resource(lookup = "java:jboss/datasources/postgres-matsumana-xa")
     DataSource dataSource1;
 
-    @Resource(lookup = "java:jboss/datasources/postgres-matsumana2")
+    @Resource(lookup = "java:jboss/datasources/postgres-matsumana2-xa")
     DataSource dataSource2;
 
     @Produces

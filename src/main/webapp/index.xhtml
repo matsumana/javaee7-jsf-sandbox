@@ -31,7 +31,7 @@
 
         <input type="text" jsf:id="input1" p:placeholder="名前を入力してください"/>
 
-        <h:commandButton value="ボタン" />
+        <h:commandButton value="ボタン" actionListener="#{listController.create()}" />
 
         <h:outputLabel value="#{listController.name}" />
 

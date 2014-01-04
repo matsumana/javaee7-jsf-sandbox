@@ -16,4 +16,7 @@ import javax.inject.Inject;
 public interface EmployeeDao {
     @Select
     Employee selectByEmployeeId(Integer employeeId);
+
+    @Insert
+    int insert(Employee employee);
 }

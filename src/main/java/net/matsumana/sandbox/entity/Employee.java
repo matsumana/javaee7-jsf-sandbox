@@ -6,7 +6,7 @@ import org.seasar.doma.*;
 import org.seasar.doma.jdbc.entity.NamingType;
 
 @Entity(naming = NamingType.SNAKE_UPPER_CASE)
-@Table(name = "EMP")
+@Table(name = "EMPLOYEE")
 //@Setter
 //@Getter
 //@NoArgsConstructor
@@ -16,7 +16,8 @@ import org.seasar.doma.jdbc.entity.NamingType;
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(sequence = "employee_employee_id_seq")
     Integer employeeId;
 
     String employeeName;

@@ -7,6 +7,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
+import javax.transaction.Transactional;
 import java.io.Serializable;
 
 @Named
@@ -27,5 +28,15 @@ public class ListController implements Serializable {
         Employee employee = employeeDao.selectByEmployeeId(3);
         System.out.println(employee.getEmployeeName());
         name = employee.getEmployeeName();
+    }
+
+    @Transactional
+    public String create() {
+        Employee employee = new Employee();
+        employee.setEmployeeName("Hogeさん");
+        employee.setVersionNo(1L);
+        employeeDao.insert(employee);
+
+        return null;
     }
 }
