@@ -1,18 +1,14 @@
 package net.matsumana.sandbox.dao;
 
 import net.matsumana.sandbox.entity.Employee;
+import net.matsumana.sandbox.infra.DaoConfig;
 import net.matsumana.sandbox.infra.DomaConfig;
-import org.seasar.doma.*;
-
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
+import org.seasar.doma.Dao;
+import org.seasar.doma.Insert;
+import org.seasar.doma.Select;
 
 @Dao(config = DomaConfig.class)
-@AnnotateWith(annotations = {
-//        @Annotation(type = Singleton.class, target = AnnotationTarget.CLASS),
-        @Annotation(type = RequestScoped.class, target = AnnotationTarget.CLASS),
-        @Annotation(type = Inject.class, target = AnnotationTarget.CONSTRUCTOR)
-})
+@DaoConfig
 public interface EmployeeDao {
     @Select
     Employee selectByEmployeeId(Integer employeeId);
