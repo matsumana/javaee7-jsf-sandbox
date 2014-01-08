@@ -7,6 +7,8 @@ import lombok.ToString;
 import org.seasar.doma.*;
 import org.seasar.doma.jdbc.entity.NamingType;
 
+import java.util.Date;
+
 @Entity(naming = NamingType.SNAKE_UPPER_CASE)
 @Table(name = "EMPLOYEE")
 @Setter
@@ -26,4 +28,8 @@ public class Employee {
 
     @Version
     Long versionNo;
+
+    byte[] fileBin;
+
+    Date updDttm;
 }
